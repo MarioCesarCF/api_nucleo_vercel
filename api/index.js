@@ -14,6 +14,8 @@ route.get('/', (req, res) => {
 
 app.use(route);
 
-app.listen(3000, () => {
-  console.log('Server running in port ' + 3000)
+const port = process.env.PORT || 27017
+
+app.listen(port, () => {
+  console.log('Server running in port ' + port)
 });
